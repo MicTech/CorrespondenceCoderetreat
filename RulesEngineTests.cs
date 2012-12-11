@@ -20,7 +20,7 @@ namespace CorrespondenceCoderetreat
         }
 
         [Test]
-        public void LivingCellWithLessThanTwoNeighborsShouldDie()
+        public void LivingCellWithOneNeighborsShouldDie()
         {
             Assert.IsFalse(rulesEngine.WillSurvive(1));
         }
