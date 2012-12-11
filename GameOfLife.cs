@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace CorrespondenceCoderetreat
 {
@@ -8,7 +9,7 @@ namespace CorrespondenceCoderetreat
         public void LivingCellWithThreeNeighboursShouldSurvive()
         {
             var rulesEngine = new RulesEngine();
-            var willSurvive = rulesEngine.WillSurvive(3);
+            bool willSurvive = rulesEngine.WillSurvive(3);
             Assert.IsTrue(willSurvive);
         }
     }
