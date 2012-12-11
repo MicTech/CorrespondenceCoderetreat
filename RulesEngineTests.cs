@@ -24,5 +24,11 @@ namespace CorrespondenceCoderetreat
         {
             Assert.IsFalse(rulesEngine.WillSurvive(1));
         }
+
+        [Test]
+        public void OnEmptySpaceWithThreeNeighboursShouldBornNewCell()
+        {
+            Assert.IsTrue(rulesEngine.WillBorn(3));
+        }
     }
 }
