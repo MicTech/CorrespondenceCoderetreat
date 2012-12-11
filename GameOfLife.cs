@@ -3,14 +3,26 @@ using System;
 
 namespace CorrespondenceCoderetreat
 {
+    [TestFixture]
     public class RulesEngineTests
     {
+        readonly RulesEngine rulesEngine;
+
+        public RulesEngineTests()
+        {
+            rulesEngine = new RulesEngine();
+        }
+
         [Test]
         public void LivingCellWithThreeNeighboursShouldSurvive()
         {
-            var rulesEngine = new RulesEngine();
-            bool willSurvive = rulesEngine.WillSurvive(3);
-            Assert.IsTrue(willSurvive);
+            Assert.IsTrue(rulesEngine.WillSurvive(3));
+        }
+
+        [Test]
+        public void LivingCellWithLessThanTwoNeighborsShouldDie()
+        {
+            Assert.IsFalse(rulesEngine.WillSurvive(1));
         }
     }
 }
