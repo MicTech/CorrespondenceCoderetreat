@@ -9,7 +9,7 @@ namespace CorrespondenceCoderetreat
     {
         public bool WillSurvive(int neighboursCount)
         {
-            return neighboursCount == 2 || neighboursCount == 3;
+            return neighboursCount >= 2;
         }
 
         public bool WillBorn(int neighborsCount)
