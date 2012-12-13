@@ -14,7 +14,7 @@ namespace CorrespondenceCoderetreat
         }
 
         [Test]
-        public void LivingCellWithThreeNeighboursShouldSurvive()
+        public void LivingCellWithThreeNeighborsShouldSurvive()
         {
             Assert.IsTrue(rulesEngine.WillSurvive(3));
         }
@@ -27,7 +27,7 @@ namespace CorrespondenceCoderetreat
         }
 
         [Test]
-        public void OnEmptySpaceWithThreeNeighboursShouldBornNewCell()
+        public void OnEmptySpaceWithThreeNeighborsShouldBornNewCell()
         {
             Assert.IsTrue(rulesEngine.WillBorn(3));
         }

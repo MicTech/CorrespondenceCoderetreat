@@ -7,9 +7,9 @@ namespace CorrespondenceCoderetreat
 {
     public class RulesEngine
     {
-        public bool WillSurvive(int neighboursCount)
+        public bool WillSurvive(int neighborsCount)
         {
-            return neighboursCount >= 2;
+            return neighborsCount >= 2;
         }
 
         public bool WillBorn(int neighborsCount)
