@@ -14,7 +14,7 @@ namespace CorrespondenceCoderetreat
 
         public bool WillBorn(int neighborsCount)
         {
-            return false;
+            return true;
         }
     }
 }
