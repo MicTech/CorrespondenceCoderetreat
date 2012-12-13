@@ -11,5 +11,10 @@ namespace CorrespondenceCoderetreat
         {
             return neighboursCount == 2 || neighboursCount == 3;
         }
+
+        public bool WillBorn(int neighborsCount)
+        {
+            return false;
+        }
     }
 }
