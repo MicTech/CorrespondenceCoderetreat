@@ -5,6 +5,9 @@ namespace CorrespondenceCoderetreat
     [TestFixture]
     public class RulesEngineTests
     {
+        const int MaxNeighbors = 8;
+        const int MinNeighbors = 0;
+
         readonly RulesEngine rulesEngine;
 
         public RulesEngineTests()
@@ -22,7 +25,14 @@ namespace CorrespondenceCoderetreat
         public void LivingCellWithLessThanTwoNeighborsShouldDie()
         {
             Assert.IsFalse(rulesEngine.WillSurvive(1));
-            Assert.IsFalse(rulesEngine.WillSurvive(0));
+            Assert.IsFalse(rulesEngine.WillSurvive(MinNeighbors));
+        }
+
+        [Test]
+        public void LivingCellWithMoreThanThreeNeighborsShouldDie()
+        {
+            Assert.IsFalse(rulesEngine.WillSurvive(4));
+            Assert.IsFalse(rulesEngine.WillSurvive(MaxNeighbors));
         }
 
         [Test]
