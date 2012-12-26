@@ -1,11 +1,13 @@
 ﻿using NUnit.Framework;
-using System;
 
 namespace CorrespondenceCoderetreat
 {
     [TestFixture]
     public class RulesEngineTests
     {
+        const int MaxNeighbors = 8;
+        const int MinNeighbors = 0;
+
         readonly RulesEngine rulesEngine;
 
         public RulesEngineTests()
@@ -14,19 +16,27 @@ namespace CorrespondenceCoderetreat
         }
 
         [Test]
-        public void LivingCellWithThreeNeighboursShouldSurvive()
+        public void LivingCellWithThreeNeighborsShouldSurvive()
         {
             Assert.IsTrue(rulesEngine.WillSurvive(3));
         }
 
         [Test]
-        public void LivingCellWithOneNeighborsShouldDie()
+        public void LivingCellWithLessThanTwoNeighborsShouldDie()
         {
             Assert.IsFalse(rulesEngine.WillSurvive(1));
+            Assert.IsFalse(rulesEngine.WillSurvive(MinNeighbors));
         }
 
         [Test]
-        public void OnEmptySpaceWithThreeNeighboursShouldBornNewCell()
+        public void LivingCellWithMoreThanThreeNeighborsShouldDie()
+        {
+            Assert.IsFalse(rulesEngine.WillSurvive(4));
+            Assert.IsFalse(rulesEngine.WillSurvive(MaxNeighbors));
+        }
+
+        [Test]
+        public void OnEmptySpaceWithThreeNeighborsShouldBornNewCell()
         {
             Assert.IsTrue(rulesEngine.WillBorn(3));
         }
