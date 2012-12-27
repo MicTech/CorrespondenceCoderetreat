@@ -40,5 +40,12 @@ namespace CorrespondenceCoderetreat
         {
             Assert.IsTrue(rulesEngine.WillBorn(3));
         }
+
+        [Test]
+        public void OnEmptySpaceWithLessThenThreeNeighborsShouldNotBornNewCell()
+        {
+            Assert.IsFalse(rulesEngine.WillBorn(2));
+            Assert.IsFalse(rulesEngine.WillBorn(MinNeighbors));
+        }
     }
 }
