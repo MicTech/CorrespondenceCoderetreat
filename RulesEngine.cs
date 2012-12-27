@@ -7,6 +7,14 @@ namespace CorrespondenceCoderetreat
         static readonly int[] SurviveRules = { 2, 3 };
         static readonly int[] BornRules = { 3 };
 
+        public RulesEngine(Rules rules)
+        {
+        }
+
+        public RulesEngine()
+        {
+        }
+
         public bool WillSurvive(int neighborsCount)
         {
             return SurviveRules.Contains(neighborsCount);
