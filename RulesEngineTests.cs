@@ -51,8 +51,8 @@ namespace CorrespondenceCoderetreat
         public void RulesShouldBeConfigurable()
         {
             var engine = new RulesEngine(new Rules(survive: new[] { 1 }, born: new[] { 6 }));
-            Assert.IsTrue(rulesEngine.WillSurvive(1));
-            Assert.IsTrue(rulesEngine.WillBorn(6));
+            Assert.IsTrue(engine.WillSurvive(1));
+            Assert.IsTrue(engine.WillBorn(6));
         }
     }
 }
