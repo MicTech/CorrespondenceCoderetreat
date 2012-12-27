@@ -42,7 +42,7 @@ namespace CorrespondenceCoderetreat
         }
 
         [Test]
-        public void OnEmptySpaceWithLessThenThreeNeighborsShouldNotBornNewCell()
+        public void OnEmptySpaceWithLessThanThreeNeighborsShouldNotBornNewCell()
         {
             Assert.IsFalse(rulesEngine.WillBorn(2));
             Assert.IsFalse(rulesEngine.WillBorn(MinNeighbors));

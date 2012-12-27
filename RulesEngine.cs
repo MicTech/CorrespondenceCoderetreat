@@ -9,7 +9,7 @@ namespace CorrespondenceCoderetreat
 
         public bool WillBorn(int neighborsCount)
         {
-            return true;
+            return neighborsCount == 3;
         }
     }
 }
