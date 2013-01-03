@@ -1,7 +1,7 @@
+using System.Linq;
+
 namespace CorrespondenceCoderetreat
 {
-    using System.Linq;
-
     public class RulesEngine
     {
         static int[] SurviveRules = { 2, 3 };
