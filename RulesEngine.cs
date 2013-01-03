@@ -4,27 +4,26 @@ namespace CorrespondenceCoderetreat
 {
     public class RulesEngine
     {
-        static int[] SurviveRules = { 2, 3 };
-        static int[] BornRules = { 3 };
-
-        public RulesEngine(Rules rules)
-        {
-            SurviveRules = rules.SurviveRules;
-            BornRules = rules.BornRules;
-        }
+        readonly Rules rules;
 
         public RulesEngine()
         {
+            rules = new Rules(new[] { 2, 3 }, new[] { 3 });
         }
 
+        public RulesEngine(Rules rules)
+        {
+            this.rules = rules;
+        }
+        
         public bool WillSurvive(int neighborsCount)
         {
-            return SurviveRules.Contains(neighborsCount);
+            return rules.SurviveRules.Contains(neighborsCount);
         }
 
         public bool WillBorn(int neighborsCount)
         {
-            return BornRules.Contains(neighborsCount);
+            return rules.BornRules.Contains(neighborsCount);
         }
     }
 }
