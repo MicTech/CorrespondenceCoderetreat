@@ -4,11 +4,13 @@ namespace CorrespondenceCoderetreat
 
     public class RulesEngine
     {
-        static readonly int[] SurviveRules = { 2, 3 };
-        static readonly int[] BornRules = { 3 };
+        static int[] SurviveRules = { 2, 3 };
+        static int[] BornRules = { 3 };
 
         public RulesEngine(Rules rules)
         {
+            SurviveRules = rules.SurviveRules;
+            BornRules = rules.BornRules;
         }
 
         public RulesEngine()
