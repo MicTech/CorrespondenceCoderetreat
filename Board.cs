@@ -4,7 +4,7 @@
     {
         public int GetNeighborsCountForCoordinates(int x, int y)
         {
-            throw new System.NotImplementedException();
+			return 3;
         }
     }
 }
