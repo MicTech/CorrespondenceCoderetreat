@@ -2,13 +2,23 @@ namespace CorrespondenceCoderetreat
 {
     public class Rules
     {
-        public int[] SurviveRules;
-        public int[] BornRules;
+        readonly int[] surviveRules;
+        readonly int[] bornRules;
 
         public Rules(int[] survive, int[] born)
         {
-            SurviveRules = survive;
-            BornRules = born;
+            surviveRules = survive;
+            bornRules = born;
+        }
+
+        public int[] BornRules
+        {
+            get { return bornRules; }
+        }
+
+        public int[] SurviveRules
+        {
+            get { return surviveRules; }
         }
     }
 }
