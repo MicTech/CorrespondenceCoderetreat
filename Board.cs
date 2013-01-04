@@ -1,10 +1,14 @@
-﻿namespace CorrespondenceCoderetreat
+﻿using System;
+namespace CorrespondenceCoderetreat
 {
     public class Board
     {
-        public int GetNeighborsCountForCoordinates(int x, int y)
+        public Board(Generation generation)
+        { }
+
+        public int CountNeightborsFor(Coordinates coordinates)
         {
-            throw new System.NotImplementedException();
+            return -1;
         }
     }
 }
