@@ -7,15 +7,14 @@ namespace CorrespondenceCoderetreat
         readonly Rules rules;
 
         public RulesEngine()
-        {
-            rules = new Rules(new[] { 2, 3 }, new[] { 3 });
-        }
+            : this(new GameOfLifeRules())
+        { }
 
         public RulesEngine(Rules rules)
         {
             this.rules = rules;
         }
-        
+
         public bool WillSurvive(int neighborsCount)
         {
             return rules.SurviveRules.Contains(neighborsCount);
