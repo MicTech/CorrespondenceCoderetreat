@@ -6,13 +6,10 @@ namespace CorrespondenceCoderetreat
     public class BoardTests
     {
         [Test]
-        public void BoardShouldReturnThreeNeighborsForCoordinatesX5Y3()
+        public void ShouldCountZeroNeighborsOnEmptyBoard()
         {
-            var x = 5;
-            var y = 3;
-            var board = new Board();
-            var neighborsCount = board.GetNeighborsCountForCoordinates(x, y);
-            Assert.AreEqual(3,neighborsCount);
+            var board = new Board(Generation.Empty);
+            Assert.AreEqual(0, board.CountNeightborsFor(new Coordinates(5, 3)));
         }
     }
 }
