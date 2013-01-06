@@ -26,5 +26,13 @@ namespace CorrespondenceCoderetreat
             var board = new Board(generation);
             Assert.AreEqual(1, board.CountNeightborsFor(new Coordinates(0, 1)));
         }
+
+		[Test]
+		public void ShouldCountTwoNeighborsorCoordinatesWithTwoNeighbors()
+		{
+			var generation = new Generation(new Coordinates(0, 0), new Coordinates(0, 2));
+			var board = new Board(generation);
+			Assert.AreEqual(2, board.CountNeightborsFor(new Coordinates(0, 1)));
+		}
     }
 }
