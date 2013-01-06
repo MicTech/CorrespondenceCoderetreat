@@ -3,12 +3,16 @@ namespace CorrespondenceCoderetreat
 {
     public class Board
     {
+        readonly Generation generation;
+
         public Board(Generation generation)
-        { }
+        {
+            this.generation = generation;
+        }
 
         public int CountNeightborsFor(Coordinates coordinates)
         {
-            return -1;
+            return generation == Generation.Empty ? 0 : -1;
         }
     }
 }
