@@ -12,7 +12,7 @@ namespace CorrespondenceCoderetreat
 
         public int CountNeightborsFor(Coordinates coordinates)
         {
-            return generation == Generation.Empty ? 0 : -1;
+            return generation == Generation.Empty ? 0 : 1;
         }
     }
 }
