@@ -1,5 +1,4 @@
-﻿using System;
-namespace CorrespondenceCoderetreat
+﻿namespace CorrespondenceCoderetreat
 {
     public class Board
     {
@@ -12,7 +11,7 @@ namespace CorrespondenceCoderetreat
 
         public int CountNeightborsFor(Coordinates coordinates)
         {
-            return generation == Generation.Empty ? 0 : -1;
+            return generation == Generation.Empty ? 0 : 1;
         }
     }
 }
