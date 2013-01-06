@@ -1,5 +1,4 @@
-﻿using System;
-namespace CorrespondenceCoderetreat
+﻿namespace CorrespondenceCoderetreat
 {
     public class Board
     {
